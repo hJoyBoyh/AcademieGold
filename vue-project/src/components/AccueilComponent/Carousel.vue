@@ -82,7 +82,7 @@ body {
 }
 h1 {
     font-family: Arial;
-    color: red;
+ 
     text-align: center;
 }
 .carousel-container{

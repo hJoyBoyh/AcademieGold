@@ -6,6 +6,7 @@ import SectionAbout  from '../components/AccueilComponent/SectionAbout.vue'
 import CardTeam from '../components/AccueilComponent/CardTeam.vue';
 import SectionTeam  from '../components/AccueilComponent/SectionTeam.vue'
 import SectionService  from '../components/AccueilComponent/SectionService.vue'
+import SectionHome  from '../components/AccueilComponent/SectionHome.vue'
 
 import CardService from '../components/AccueilComponent/CardService.vue'
 import Carousel from '../components/AccueilComponent/Carousel.vue'
@@ -16,17 +17,19 @@ import InfiniteImg from '../components/AccueilComponent/InfiniteImgCarousel.vue'
 
 <template>
   <main>
+    
     <!-- <ReservationBtn></ReservationBtn> -->
     <!-- <RedirectionBtn></RedirectionBtn> -->
-    <!-- <Header class="stick" id="navbar"></Header> -->
-    <InfiniteImg></InfiniteImg>
-    <!-- <SectionAbout></SectionAbout> -->
+    <Header class="stick" id="navbar"></Header>
+    <SectionHome></SectionHome>
+    <!-- <InfiniteImg></InfiniteImg> -->
+    <SectionAbout></SectionAbout>
     <!-- <CardTeam></CardTeam> -->
-    <!-- <SectionTeam></SectionTeam> -->
+    <SectionTeam></SectionTeam>
     <!-- <CardService></CardService> -->
-    <!-- <SectionService></SectionService> -->
+    <SectionService></SectionService>
     <!-- <Carousel></Carousel> -->
-    <!-- <SectionFooter></SectionFooter> -->
+    <SectionFooter></SectionFooter>
 
     
    
@@ -34,11 +37,7 @@ import InfiniteImg from '../components/AccueilComponent/InfiniteImgCarousel.vue'
 
 </template>
 <style scoped>
-#navbar{
-  transition: top 0.3s;
-  position: fixed;
 
-}
 
 
 body,html{

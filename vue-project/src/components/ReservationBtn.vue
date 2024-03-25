@@ -2,12 +2,18 @@
 
 </script>
 <template>
+    <a href="https://www.setmore.com/">
     <div class="redirection-btn">
+   
         <p>Réservation</p>
     </div>
+</a>
 
 </template>
 <style scoped>
+a{
+    text-decoration: none;
+}
 .redirection-btn{
     height: 40px;
     width: 120px;

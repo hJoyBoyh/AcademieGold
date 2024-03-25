@@ -8,16 +8,16 @@ export default{
     },
     methods:{
         infiniteCarousel(){
-let titleAbout2 = document.querySelectorAll(".infinite-img-carousel")
-console.log('hha')
-let carrouselTitle = gsap.timeline()
-carrouselTitle.to(titleAbout2,{
-    duration : 5,
-    x:"-100%",
-    repeat:-1,
-    ease: Linear.ease
+// let titleAbout2 = document.querySelectorAll(".infinite-img-carousel")
+// console.log('hha')
+// let carrouselTitle = gsap.timeline()
+// carrouselTitle.to(titleAbout2,{
+//     duration : 5,
+//     x:"-100%",
+//     repeat:-1,
+//     ease: Linear.ease
     
-})
+// })
         }
     }
     ,
@@ -27,7 +27,27 @@ carrouselTitle.to(titleAbout2,{
 }
 </script>
 <template>
-    <div class="infinite-carousel-container">
+    <section>
+    <article>
+        <div>
+          <ul>
+            <li><img src="../../assets/academie-service.png" /></li>
+            <li><img src="../../assets/academie-service.png" /></li>
+            <li><img src="../../assets/academie-service.png" /></li>
+            <li><img src="../../assets/academie-service.png" /></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><img src="../../assets/academie-service.png" /></li>
+            <li><img src="../../assets/academie-service.png" /></li>
+            <li><img src="../../assets/academie-service.png" /></li>
+            <li><img src="../../assets/academie-service.png" /></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <!-- <div class="infinite-carousel-container">
         <div class="infinite-img-carousel">
             <img src="../../assets/academie-service.png" alt="">
         </div>
@@ -47,9 +67,65 @@ carrouselTitle.to(titleAbout2,{
             <img src="../../assets/academie-service.png" alt="">
         </div>
 
-    </div>
+    </div> -->
 </template>
-<style>
+<style scoped>
+img {
+    display: block;
+    width: 100%;
+    transform: rotate(-2deg);
+  }
+  
+  section {
+    width: 100%;
+  }
+  
+  article {
+    display: flex;
+    width: 200%;
+    animation: bannermove 20s linear infinite;
+    gap:-2px;
+  }
+  
+  article.paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+  div {
+    width: 100%;
+   
+  }
+  
+  ul {
+    display: flex;
+    gap:-5px;
+
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  
+  }
+  
+  li {
+    width: 100%;
+  }
+  
+  li:nth-child(2) {
+  }
+  
+  li:nth-child(3) {
+  }
+  
+  @keyframes bannermove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+/*
 .infinite-carousel-container{
     position: relative;
     z-index: 5;
@@ -71,6 +147,6 @@ carrouselTitle.to(titleAbout2,{
    .infinite-img-carousel>img{
     height: 300px;
     height: 200px;
-   }
+   }*/
 
 </style>

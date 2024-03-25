@@ -28,6 +28,8 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    /*give more space bew*/
+    padding-bottom: 20vh;
 
 
 }
