@@ -83,7 +83,7 @@ img {
   article {
     display: flex;
     width: 200%;
-    animation: bannermove 20s linear infinite;
+    animation: bannermove 30s linear infinite;
     gap:-2px;
   }
   

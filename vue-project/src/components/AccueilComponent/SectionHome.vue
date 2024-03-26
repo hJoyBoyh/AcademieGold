@@ -16,33 +16,33 @@ export default {
     },
     methods: {
         test() {
-            if(StartAnimation === true){
+            // if(StartAnimation === true){
             let tl = gsap.timeline()
             tl.add('start')
 
             tl.from('.home-img-1-container', {
-                duration: 2,
+                duration: 3,
                 transformOrigin: 'top center',
                 scaleY: 0,
                 ease: "power4.out",
             }, 'start')
             tl.from('.home-img-1', {
-                duration: 1,
+                duration: 2,
                 transformOrigin: 'center center',
-                scale: 5,
+                scale: 7,
                 ease: "circ.out",
             }, 'start')
 
             tl.from('.home-img-2-container', {
-                duration: 2,
+                duration: 3,
                 transformOrigin: 'left center',
                 scaleX: 0,
                 ease: "power4.out",
             }, 'start')
             tl.from('.home-img-2', {
-                duration: 1,
+                duration: 2,
                 transformOrigin: 'center center',
-                scale: 5,
+                scale: 7,
                 ease: "circ.out",
             }, 'start')
 
@@ -71,7 +71,7 @@ export default {
 
 
             
-        }
+        // }
         }
     },
     mounted() {
