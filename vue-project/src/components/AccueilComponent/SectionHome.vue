@@ -45,7 +45,7 @@ export default {
                 stagger: 0.1,
                 ease: "power4.out"
             },)
-setTimeout(() => {
+
     tl2.from('.home-img-1-container', {
                 duration: 3,
                 transformOrigin: 'top center',
@@ -71,8 +71,7 @@ setTimeout(() => {
                 scale: 7,
                 ease: "circ.out",
             }, 'start')
-    
-}, 3000);
+
 
             
 
@@ -190,7 +189,7 @@ setTimeout(() => {
 .home-img-1-container {
     height: 300px;
     overflow: hidden;
-    opacity: 0;
+   
 }
 
 .home-img-1 {
@@ -220,7 +219,7 @@ setTimeout(() => {
     right: 100px;
     bottom: 110px;
     overflow: hidden;
-    opacity: 0;
+    
 }
 
 .home-img-2 {
