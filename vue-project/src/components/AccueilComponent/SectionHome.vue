@@ -18,56 +18,63 @@ export default {
         test() {
             // if(StartAnimation === true){
             let tl = gsap.timeline()
-            tl.add('start')
+            let tl2 = gsap.timeline()
+            tl2.add('start')
 
-            tl.from('.home-img-1-container', {
+           
+
+
+            tl.from('.home-first-section>h1>span', {
+                duration: 0.5,
+                y: -350,
+                stagger: 0.1,
+                ease: "power4.out"
+            }, )
+
+            tl.from('.home-second-section-title>h1>span', {
+                duration: 0.7,
+                y: -350,
+                stagger: 0.1,
+                ease: "power4.out"
+            },)
+
+
+            tl.from('.home-third-section-title>h1>span', {
+                duration: 0.7,
+                y: -350,
+                stagger: 0.1,
+                ease: "power4.out"
+            },)
+setTimeout(() => {
+    tl2.from('.home-img-1-container', {
                 duration: 3,
                 transformOrigin: 'top center',
                 scaleY: 0,
                 ease: "power4.out",
             }, 'start')
-            tl.from('.home-img-1', {
-                duration: 2,
+            tl2.from('.home-img-1', {
+                duration: 1,
                 transformOrigin: 'center center',
                 scale: 7,
                 ease: "circ.out",
             }, 'start')
 
-            tl.from('.home-img-2-container', {
+            tl2.from('.home-img-2-container', {
                 duration: 3,
                 transformOrigin: 'left center',
                 scaleX: 0,
                 ease: "power4.out",
             }, 'start')
-            tl.from('.home-img-2', {
-                duration: 2,
+            tl2.from('.home-img-2', {
+                duration: 1,
                 transformOrigin: 'center center',
                 scale: 7,
                 ease: "circ.out",
             }, 'start')
+    
+}, 3000);
 
-
-            tl.from('.home-first-section>h1>span', {
-                duration: 1,
-                y: -350,
-                stagger: 0.1,
-                ease: "power4.out"
-            }, "start")
-
-            tl.from('.home-second-section-title>h1>span', {
-                duration: 1,
-                y: -350,
-                stagger: 0.1,
-                ease: "power4.out"
-            }, "start")
-
-
-            tl.from('.home-third-section-title>h1>span', {
-                duration: 1,
-                y: -350,
-                stagger: 0.1,
-                ease: "power4.out"
-            }, "start")
+            
 
 
             
@@ -168,7 +175,7 @@ export default {
     align-items: baseline;
     overflow: hidden;
     position: relative;
-    bottom: 80px;
+    bottom: 100px;
 
 }
 
@@ -183,6 +190,7 @@ export default {
 .home-img-1-container {
     height: 300px;
     overflow: hidden;
+    opacity: 0;
 }
 
 .home-img-1 {
@@ -212,6 +220,7 @@ export default {
     right: 100px;
     bottom: 110px;
     overflow: hidden;
+    opacity: 0;
 }
 
 .home-img-2 {
@@ -242,5 +251,6 @@ export default {
     width: 20%;
     position: relative;
     bottom: 100px;
+    opacity: 0;
 }
 </style>

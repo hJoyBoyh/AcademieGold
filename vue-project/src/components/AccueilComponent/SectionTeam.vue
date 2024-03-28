@@ -1,14 +1,38 @@
 <script>
 import CardTeam from './CardTeam.vue'
+import { gsap } from 'gsap'
+
+
+
 
 export default {
     data() {
         return {};
     },
     components:{
-        CardTeam,
-       
+        CardTeam, 
     },
+    methods:{
+        sectionTeamAnimation(){
+            let tl = gsap.timeline();
+            tl.from('.team-title-container',{
+                duration:1,
+                x:-150,
+                opacity:0
+            })
+            tl.from('.card',{
+                duration:1,
+                y:150,
+                opacity:0,
+                stagger:0.2
+
+            })
+
+        }
+    },
+    mounted(){
+        this.sectionTeamAnimation()
+    }
 }
 </script>
 <template>
@@ -17,8 +41,8 @@ export default {
             <h2>Notre Equipe</h2>
         </div>
         <div class="team-content">
-            <CardTeam></CardTeam>
-            <CardTeam></CardTeam>
+            <CardTeam  class="card"></CardTeam>
+            <CardTeam class="card"></CardTeam>
 
 
         </div>
@@ -41,6 +65,9 @@ export default {
 
 
 }
+.team-title-container{
+    opacity: 1;
+}
 .team-title-container>h2{
     font-size: 3em;
     margin: 0;
@@ -53,5 +80,8 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.card{
+    opacity: 1;
 }
 </style>

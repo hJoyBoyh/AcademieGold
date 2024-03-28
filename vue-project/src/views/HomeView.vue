@@ -21,11 +21,11 @@ import InfiniteImg from '../components/AccueilComponent/InfiniteImgCarousel.vue'
     <!-- <ReservationBtn></ReservationBtn> -->
     <!-- <RedirectionBtn></RedirectionBtn> -->
     <!-- <Header class="stick" id="navbar"></Header> -->
-    <!-- <SectionHome></SectionHome> -->
+    <SectionHome></SectionHome>
     <!-- <InfiniteImg></InfiniteImg> -->
     <!-- <SectionAbout></SectionAbout> -->
     <!-- <CardTeam></CardTeam> -->
-    <SectionTeam></SectionTeam>
+    <!-- <SectionTeam></SectionTeam> -->
     <!-- <CardService></CardService> -->
     <!-- <SectionService></SectionService> -->
     <!-- <Carousel></Carousel> -->

@@ -1,6 +1,7 @@
 <script>
 import CardService from './CardService.vue'
 import ReservationBtn from '../ReservationBtn.vue'
+import {gsap} from 'gsap'
 
 
 export default {
@@ -10,8 +11,22 @@ export default {
     components: {
         CardService,
         ReservationBtn
-
     },
+    methods:{
+        sectionFooterAnimation(){
+            let tl = gsap.timeline();
+            tl.from('.footer-title',{
+                duration:1,
+                y:150,
+                opacity:0
+            })
+            
+            
+        }
+    },
+    mounted(){
+        this.sectionFooterAnimation()
+    }
 }
 </script>
 <template>
@@ -77,10 +92,11 @@ span {
 }
 
 .footer-title {
-    height: 20vh;
+    height: 30vh;
     width: 100vw;
     color: white;
     margin-bottom: 20vh;
+    opacity: 1;
 }
 
 .footer-title>h1 {

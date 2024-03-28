@@ -1,6 +1,7 @@
 <script>
 import CardService from './CardService.vue'
 import RedirectionBtn from '../RedirectionBtn.vue'
+import {gsap} from 'gsap'
 
 
 export default {
@@ -11,7 +12,34 @@ export default {
         CardService,
         RedirectionBtn
        
+
     },
+    methods:{
+        sectionServiceAnimation(){
+            let tl = gsap.timeline();
+            tl.from('.services-title-container',{
+                duration:1,
+                x:-150,
+                opacity:0
+            })
+            tl.from('.card-service',{
+                duration:1,
+                y:150,
+                opacity:0,
+                stagger:0.2
+
+            })
+            tl.to('.btn-service',{
+                duration:0.3,
+                opacity:1,
+                
+
+            })
+        }
+    },
+    mounted(){
+        this.sectionServiceAnimation()
+    }
 }
 </script>
 <template>
@@ -20,15 +48,15 @@ export default {
             <h2>Nos Services</h2>
         </div>
         <div class="services-content">
-            <CardService></CardService>
-            <CardService></CardService>
-            <CardService></CardService>
+            <CardService class="card-service"</CardService>
+            <CardService class="card-service"</CardService>
+            <CardService class="card-service"></CardService>
 
 
 
         </div>
         <div class="redirection-btn-container">
-        <RedirectionBtn title="Voir plus"></RedirectionBtn>
+        <RedirectionBtn title="Voir plus" class="btn-service"></RedirectionBtn>
     </div>
     </div>
 
@@ -71,5 +99,11 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.card-service{
+    opacity: 1;
+}
+.btn-service{
+    opacity: 0;
 }
 </style>
