@@ -22,14 +22,14 @@ import InfiniteImg from '../components/AccueilComponent/InfiniteImgCarousel.vue'
     <!-- <RedirectionBtn></RedirectionBtn> -->
     <!-- <Header class="stick" id="navbar"></Header> -->
     <SectionHome></SectionHome>
-    <!-- <InfiniteImg></InfiniteImg> -->
-    <!-- <SectionAbout></SectionAbout> -->
+    <InfiniteImg></InfiniteImg>
+    <SectionAbout></SectionAbout>
     <!-- <CardTeam></CardTeam> -->
-    <!-- <SectionTeam></SectionTeam> -->
+    <SectionTeam></SectionTeam>
     <!-- <CardService></CardService> -->
-    <!-- <SectionService></SectionService> -->
+    <SectionService></SectionService>
     <!-- <Carousel></Carousel> -->
-    <!-- <SectionFooter></SectionFooter> -->
+    <SectionFooter></SectionFooter>
 
     
    
