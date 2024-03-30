@@ -2,6 +2,8 @@
 import ReservationBtn from '../components/ReservationBtn.vue';
 import RedirectionBtn from '../components/RedirectionBtn.vue';
 import Header from '../components/Header.vue'
+import Loading from '../components/Loading.vue'
+
 import SectionAbout  from '../components/AccueilComponent/SectionAbout.vue'
 import CardTeam from '../components/AccueilComponent/CardTeam.vue';
 import SectionTeam  from '../components/AccueilComponent/SectionTeam.vue'
@@ -16,20 +18,22 @@ import InfiniteImg from '../components/AccueilComponent/InfiniteImgCarousel.vue'
 </script>
 
 <template>
+  <!-- <Loading></Loading> -->
+
   <main>
     
     <!-- <ReservationBtn></ReservationBtn> -->
     <!-- <RedirectionBtn></RedirectionBtn> -->
     <!-- <Header class="stick" id="navbar"></Header> -->
     <SectionHome></SectionHome>
-    <InfiniteImg></InfiniteImg>
-    <SectionAbout></SectionAbout>
+    <!-- <InfiniteImg></InfiniteImg> -->
+    <!-- <SectionAbout></SectionAbout> -->
     <!-- <CardTeam></CardTeam> -->
-    <SectionTeam></SectionTeam>
+    <!-- <SectionTeam></SectionTeam> -->
     <!-- <CardService></CardService> -->
-    <SectionService></SectionService>
+    <!-- <SectionService></SectionService> -->
     <!-- <Carousel></Carousel> -->
-    <SectionFooter></SectionFooter>
+    <!-- <SectionFooter></SectionFooter> -->
 
     
    
@@ -46,6 +50,7 @@ body,html{
   min-height: 100vh;
   max-width: 100vw;
 }
+
 main{
   margin: 0;
   padding: 0;
@@ -53,11 +58,12 @@ main{
  max-width: 100vw;
 display: flex;
   flex-direction: column;
-/* justify-content: center;*/
+ justify-content: center;
  align-items: center;
  overflow-x: hidden;
   
   background-color: #010001;
 }
+
 
 </style>

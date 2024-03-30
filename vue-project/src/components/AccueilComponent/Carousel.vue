@@ -72,19 +72,8 @@ export default {
 
 
 </template>
-<style>
-html {
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    background-color: #000;
-}
-h1 {
-    font-family: Arial;
- 
-    text-align: center;
-}
+<style scoped >
+
 .carousel-container{
     width: 100vw;
     display: flex;

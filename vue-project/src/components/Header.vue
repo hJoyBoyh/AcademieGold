@@ -41,7 +41,7 @@ export default {
                 <img src="../assets/academie-black-logo.jpg" alt="">
             </div>
             <div class="nav-container">
-                <!-- <li class="hover-underline-animation">Accueil</li>
+        <!-- <li class="hover-underline-animation">Accueil</li>
         <li class="hover-underline-animation">Service</li>
         <li class="hover-underline-animation">Porfolio</li> -->
                 <ReservationBtn></ReservationBtn>
@@ -60,15 +60,14 @@ export default {
         <div class="show-menu">
             <div class="menu-container">
                 <div class="menu-option-container">
-                    <a href="">
-                        
+                    <a href="">  
                         <li class="hover-underline-animation">Accueil</li>
                     </a>
                     <a href="">
-                        <li >Porfolio</li>
+                        <li class="hover-underline-animation" >Porfolio</li>
                     </a>
                     <a href="">
-                        <li>Service</li>
+                        <li class="hover-underline-animation">Service</li>
                     </a>
                 </div>
                 <div class="contact-option-container">
@@ -189,6 +188,7 @@ li {
     align-items: center;
 }
 .menu-container{
+    height: 80%;
     width:80%;
     display: flex;
     flex-direction: row;
@@ -197,6 +197,8 @@ li {
 }
 .menu-option-container{
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
 }
 .menu-option-container>a:nth-child(1){
     color: white
@@ -222,6 +224,11 @@ li {
     margin: 0;
 } .social-menu>a>p{
     margin: 0;
+    color: white
+}
+.social-menu>a>li{
+    margin: 0;
+    color: white
 }
 .contact-option-container{
     height: 40vh;
@@ -236,7 +243,7 @@ li {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: white;
+  /*  color: white;*/
 }
 
 .hover-underline-animation::after {
@@ -244,8 +251,8 @@ li {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
+    height: 3px;
+    bottom: 0px;
     left: 0;
     background-color: white;
     color: white;

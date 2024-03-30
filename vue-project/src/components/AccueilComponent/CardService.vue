@@ -16,7 +16,7 @@
     </div>
 
 </template>
-<style>
+<style scoped>
 .card-service-container{
     width: 300px;
     height: 254px;

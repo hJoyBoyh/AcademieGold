@@ -8,11 +8,23 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
+<style>
+
 body,html{
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+
+}
+h1 {
+  font-family: Arial;
+
+}
+
 </style>

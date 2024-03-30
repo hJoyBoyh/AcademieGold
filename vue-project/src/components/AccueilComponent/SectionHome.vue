@@ -16,13 +16,33 @@ export default {
     },
     methods: {
         test() {
+            document.querySelector('.home-first-section').style.opacity = 0
+            document.querySelector('.home-second-section').style.opacity = 0
+            document.querySelector('.home-third-section').style.opacity = 0
+
+
+            setTimeout(() => {
+                
+                document.querySelector('.home-first-section').style.opacity = 1
+            document.querySelector('.home-second-section').style.opacity = 1
+            document.querySelector('.home-third-section').style.opacity = 1
+
+            
             // if(StartAnimation === true){
             let tl = gsap.timeline()
             let tl2 = gsap.timeline()
             tl2.add('start')
+            tl.add('start')
 
            
 
+            tl.to('.home-third-section>p', {
+                duration: 1,
+                opacity:1,
+                transformOrigin:'left center',
+                ease: "power4.out"
+            }, )
+            
 
             tl.from('.home-first-section>h1>span', {
                 duration: 0.5,
@@ -35,7 +55,9 @@ export default {
                 duration: 0.7,
                 y: -350,
                 stagger: 0.1,
-                ease: "power4.out"
+                ease: "power4.out",
+                delay:-0.7
+            
             },)
 
 
@@ -43,33 +65,38 @@ export default {
                 duration: 0.7,
                 y: -350,
                 stagger: 0.1,
-                ease: "power4.out"
+                ease: "power4.out",
+                delay:-0.7
             },)
 
-    tl2.from('.home-img-1-container', {
+    tl.from('.home-img-1-container', {
                 duration: 3,
                 transformOrigin: 'top center',
                 scaleY: 0,
                 ease: "power4.out",
+                delay:2.2
             }, 'start')
-            tl2.from('.home-img-1', {
+            tl.from('.home-img-1', {
                 duration: 1,
                 transformOrigin: 'center center',
                 scale: 7,
                 ease: "circ.out",
+                delay:2.2
             }, 'start')
 
-            tl2.from('.home-img-2-container', {
+            tl.from('.home-img-2-container', {
                 duration: 3,
                 transformOrigin: 'left center',
                 scaleX: 0,
                 ease: "power4.out",
+                delay:2.2
             }, 'start')
-            tl2.from('.home-img-2', {
+            tl.from('.home-img-2', {
                 duration: 1,
                 transformOrigin: 'center center',
                 scale: 7,
                 ease: "circ.out",
+                delay:2.2
             }, 'start')
 
 
@@ -78,8 +105,11 @@ export default {
 
             
         // }
+    }, 9000);
         }
-    },
+        
+    }
+    ,
     mounted() {
         this.test()
     }
@@ -139,42 +169,52 @@ export default {
 .home-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: black;
+    color: white;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
 .home-first-section>h1 {
     margin: 0;
-    font-size: 7.5em;
+    font-size: 7em;
     width: 90vw;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
+    position: relative;
+    left: 50px;
     overflow: hidden;
 }
 
 .home-second-section-title>h1 {
     margin: 0;
-    font-size: 7.5em;
+    font-size: 7em;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
     overflow: hidden;
     transform: rotate(-90deg);
     position: relative;
-    top: 80px;
-    right: 30px;
+    top: 95px;
+  
     color: #CFA246;
 }
 
 .home-third-section-title>h1 {
     margin: 0;
-    font-size: 7.5em;
+    font-size: 7em;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
     overflow: hidden;
     position: relative;
-    bottom: 100px;
+    bottom: 80px;
+    right: 140px;
 
 }
 
@@ -187,8 +227,12 @@ export default {
 }
 
 .home-img-1-container {
-    height: 300px;
+    height: 270px;
     overflow: hidden;
+    position: relative;
+    left:60px;
+    top:20px
+
    
 }
 
@@ -199,7 +243,7 @@ export default {
 }
 
 .home-second-section>h1 {
-    font-size: 7.5em;
+    font-size: 7em;
     width: 0;
     transform: rotate(-90deg);
     margin: 0;
@@ -237,7 +281,7 @@ export default {
 }
 
 .home-third-section>h1 {
-    font-size: 7.5em;
+    font-size: 7em;
     margin: 0;
     position: relative;
     bottom: 100px;
@@ -249,7 +293,8 @@ export default {
     font-size: 1.5em;
     width: 20%;
     position: relative;
-    bottom: 100px;
+    bottom: 50px;
+    left:50px;
     opacity: 0;
 }
 </style>
